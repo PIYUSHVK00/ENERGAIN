@@ -70,7 +70,7 @@
                     Current Slab :-
                 </div>
             </div>
-            <div id="title-bar1">Electricuty Uses</div>
+            <div id="title-bar1">Electricity Usages</div>
 
 
             <?php
@@ -107,7 +107,7 @@
             }
             ?>
 
-            <div id="title-bar1">Solar Electricity Uses</div>
+            <div id="title-bar1">Solar Electricity Usages</div>
 
             <?php
                 if (!empty($solarusages_data)) {

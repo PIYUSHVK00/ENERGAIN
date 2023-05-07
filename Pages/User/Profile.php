@@ -45,7 +45,7 @@
                         mysqli_query($conn, $update_query);
                         echo "Password updated successfully!";
                     } else {
-                        echo "New password and confirm password do not match!";
+                        echo "New password and confirm password does not match!";
                     }
                 } else {
                     echo "Current password is incorrect!";
@@ -55,6 +55,7 @@
             }
         }
 
+        $email = $_SESSION['email'];
 
         // Get user info
         $user_info_query = "SELECT fname, lname, mobile_no, meter_id FROM users WHERE email = '$email'";
@@ -64,25 +65,6 @@
         $lname = $user_info_row['lname'] ?? "";
         $mobile_no = $user_info_row['mobile_no'] ?? "";
         $meter_id = $user_info_row['meter_id'] ?? "";
-
-        
-        // if(isset($_POST['submit2'])) {
-        //     $fname = $_POST['fname'];
-        //     $lname = $_POST['lname'];
-        //     $emailid = $_POST['emailid'];
-        //     $mobile_no = $_POST['mobile_no'];
-        //     $gender = $_POST['gender'];
-        //     $address = $_POST['address'];
-
-        //     $insert_query = "INSERT INTO users (fname, lname, emailid, mobile_no, gender, address) VALUES ('$fname', '$lname', '$emailid', '$mobile_no', '$gender', '$address')";
-        //     $insert_result = mysqli_query($conn, $insert_query);
-
-        //     if($insert_result) {
-        //         echo "Data inserted successfully!";
-        //     } else {
-        //         echo "Error inserting data: " . mysqli_error($conn);
-        //     }
-        // }
 
     ?>
 
@@ -98,33 +80,9 @@
                 <form method="POST">
                     <input class="inputs mb-4" type="text" name="current_password" placeholder="Current Password" />
                     <input class="inputs mb-4" type="text" name="new_password" placeholder="New Password" />
-                    <input class="inputs mb-4" type="text" name="confirm_password" placeholder="Conform New Password" />
+                    <input class="inputs mb-4" type="text" name="confirm_password" placeholder="Confirm New Password" />
                     <input class="submit-btn" type="submit" name="submit" />
                 </form>
-            </div>
-
-            <div id="title-bar1">Account Setting</div>
-
-            <div class="box">
-                <form method="post">
-                    <div class="flex gap-16 mb-6">
-                        <input class="inputs" type="text" name="fname" placeholder="First Name" required />
-                        <input class="inputs" type="text" name="lname" placeholder="Last Name" required />
-                    </div>
-
-                    <div class="flex gap-16 mb-6">
-                        <input class="inputs" type="email" name="email" placeholder="Email" required />
-                        <input class="inputs" type="number" name="mobile_no" placeholder="Mobile No." required />
-                    </div>
-
-                    <div class="flex gap-16 mb-6">
-                        <input class="inputs" type="text" name="gender" placeholder="Gender" required />
-                        <input class="inputs" type="text" name="address" placeholder="Address" required />
-                    </div>
-
-                    <button class="submit-btn mt-2" type="submit2" name="submit2">Submit</button>
-                </form>
-
             </div>
 
         </div>

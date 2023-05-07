@@ -169,7 +169,7 @@
 
                 </div>
                 <div class="col-xl-6 d-none d-xl-block right-side">
-                    <img src=".\assets\img\signup.png" alt="Sample photo" class="img-fluid imgg " />
+                    <img src="../../assets/img/signup.png" alt="Sample photo" class="img-fluid imgg " />
                 </div>
             </div>
         </div>
